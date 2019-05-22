@@ -48,6 +48,6 @@ for file in os.listdir(apks_folder):
 	href = element.get_attribute('href')
 	r = requests.get(href, allow_redirects=True)
 	open(code_folder +  file[:-4]+'.zip', 'wb').write(r.content)
-	print('decompiling ' + file " completed")
+	print('decompiling ' + file + " completed")
 
 browser.close()
